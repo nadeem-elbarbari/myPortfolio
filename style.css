@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+
+:root {
+    --primary-bg: #111;
+    --secondary-bg: #0079ff;
+    --big-title-color: #222;
+    --text-color_1: #555;
+    --accent-color_1: #97e7e1;
+}
+
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    background-color: var(--primary-bg);
+}
+
+.salute {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.saluteTextContainer {
+    flex: 3;
+    .saluteText {
+        color: var(--big-title-color);
+        font-size: 60vw;
+        cursor: default;
+    }
+}
+
+.saluteImageContainer {
+    flex: 1;
+
+    .saluteImage {
+        width: 100%;
+        justify-self: end;
+    }
+}
+
+.nameContainer {
+    height: 100vh;
+    background-color: var(--secondary-bg);
+
+    .name {
+        font-size: 15vw;
+        color: var(--big-title-color);
+        cursor: default;
+        text-align: center;
+        line-height: 100vh;
+    }
+}
+
+.jobTitleContainer {
+    height: 100vh;
+
+    .jobTitle {
+        font-size: 10vw;
+        color: var(--big-title-color);
+        cursor: default;
+        /* text-align: center; */
+        line-height: 100vh;
+    }
+}
+
+.dark {
+    background: url(./images/bg1.png);
+}
+
+.colorful {
+    background: url(./images/bg2.png);
+    background-color: var(--secondary-bg);
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 30vh;
+    padding: 0 100px;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.project:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.projectsTitle {
+    font-size: 10vw;
+    color: var(--big-title-color);
+}
+
+.projectTitle {
+    font-size: 7vw;
+    text-align: justify;
+    color: var(--text-color_1);
+}
+
+.projectDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 50px;
+    cursor: default;
+}
+
+.projectDesc {
+    color: var(--text-color_1);
+    font-size: 20px;
+}
+
+.laptop {
+    width: 600px;
+    height: 379px;
+    flex: 1;
+    position: relative;
+}
+
+.laptopScreen {
+    width: 451px;
+    height: 283px;
+    position: absolute;
+    top: 18px;
+    left: 68px;
+    /* border-radius: 28px; */
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.laptopApp {
+    width: 100%;
+}
+
+.projectButton {
+    padding: 10px 20px;
+    color: var(--text-color_1);
+    background-color: transparent;
+    border: 2px solid var(--text-color_1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: 'View Demo';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        transition: all 1s;
+        color: var(--big-title-color);
+        background-color: var(--text-color_1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &:hover::after {
+        left: 0;
+    }
+}
