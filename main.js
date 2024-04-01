@@ -8,7 +8,6 @@ const jobTitleContainer = document.querySelectorAll('.jobTitleContainer');
 const jobTitle = document.querySelectorAll('.jobTitle');
 const projectsTitle = document.querySelector('.projectsTitle');
 const laptop = document.querySelectorAll('.laptop');
-console.log('laptop :', laptop[2]);
 
 for (let index = 0; index < 365; index++) {
     const list = [
@@ -30,9 +29,9 @@ for (let index = 0; index < 365; index++) {
     boxContainer.appendChild(element);
 }
 
+// Scroll Animations
 window.addEventListener('scroll', () => {
     let offsetY = window.scrollY;
-
     saluteTextContainer.style.transform = `translateY(${offsetY * 0.1}px)`;
     saluteImageContainer.style.transform = `translate(${offsetY * 0.4}px, ${offsetY * 0.7}px)`;
     myName.style.transform = `translateX(${(offsetY - 900) * 0.4}px)`;
@@ -41,6 +40,11 @@ window.addEventListener('scroll', () => {
     jobTitleContainer[1].style.backgroundPositionY = `${-offsetY * 0.5}px`;
     jobTitle[0].style.transform = `translateX(calc(200vh - ${offsetY}px))`;
     jobTitle[1].style.transform = `translateX(calc(-300vh + ${offsetY}px))`;
-    laptop[0].style.transform = `translateX(calc(-480vh + ${offsetY}px))`;
-    laptop[1].style.transform = `translateX(calc(610vh - ${offsetY}px))`;
+
+    for (let i = 0; i < $('.projects-box').children().length; i++) {
+        if ($('#project_' + (i + 1)).offset().top - 500 < offsetY) {
+            $('#proj_' + (i + 1)).addClass('animate__animated animate__fadeInLeft');
+            $('#proj_' + (i + 1) + '_desc').addClass('animate__animated animate__fadeInRight');
+        }
+    }
 });

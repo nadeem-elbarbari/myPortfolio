@@ -14,6 +14,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* transition: all .5s; */
 }
 
 html {
@@ -88,7 +89,7 @@ html {
     background-color: var(--secondary-bg);
 }
 
-.projects {
+.projects , .projects-box{
     display: flex;
     flex-direction: column;
     gap: 30vh;
@@ -98,14 +99,24 @@ html {
 .project {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 100px;
     height: 100vh;
     overflow: hidden;
 }
 
-.project:nth-child(2n) {
-    flex-direction: row-reverse;
+#proj_1,
+#proj_2,
+#proj_1_desc,
+#proj_2_desc {
+    opacity: 0;
+    transition: opacity 1s;
+}
+#proj_1.animate__animated,
+#proj_2.animate__animated,
+#proj_2_desc.animate__animated,
+#proj_1_desc.animate__animated {
+    opacity: 1;
 }
 
 .projectsTitle {
@@ -136,7 +147,7 @@ html {
 .laptop {
     width: 600px;
     height: 379px;
-    left: 200px;
+    /* left: 200px; */
     flex: 1;
     position: relative;
 }
@@ -252,9 +263,15 @@ html {
     color: var(--text-color_1);
 }
 
+.findMe {
+    display: none;
+    font-size: 50px;
+    color: var(--text-color_1);
+}
+
 @media screen and (max-width: 1024px) {
     .projects {
-        padding: 0 30px;
+        padding: 0 10px;
         text-align: center;
     }
 
@@ -264,13 +281,8 @@ html {
         text-align: justify;
     }
 
-    .project:nth-child(2n) {
-        flex-direction: column;
-    }
-
-    .phone,
-    .laptop {
-        transform: none !important;
+    .projects-box {
+        padding: 0 5px;
     }
 
     .githubChart {
@@ -290,6 +302,10 @@ html {
         color: #555;
         font-size: 30px;
         text-align: center;
+    }
+
+    .findMe {
+        display: block;
     }
 }
 
