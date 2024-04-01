@@ -247,71 +247,30 @@ html {
     align-items: center;
 }
 
+.githubUserName {
+    font-size: 30px;
+    color: var(--text-color_1);
+}
+
 @media screen and (max-width: 1024px) {
- 
     .projects {
         padding: 0 30px;
         text-align: center;
     }
 
-
-    .name {
-   
-        text-align: left !important;
-        margin-left: 160px;
-        /* width: 300px !important; */
-        font-size: 70px !important;
-    }
-
-
     .project {
-        flex-direction: column !important;
-        padding: 50px 0px;
+        flex-direction: column;
         height: max-content;
-
-        .projectTitle {
-            font-size: 50px;
-            text-align: center;
-        }
-
+        text-align: justify;
     }
 
     .project:nth-child(2n) {
-        flex-direction: column !important;
+        flex-direction: column;
     }
 
-    .projectDetail {
-        gap: 20px !important;
-    }
-
-    .projectDesc {
-        text-align: justify;
-        margin-bottom: 10px;
-    }
-
+    .phone,
     .laptop {
         transform: none !important;
-        margin-bottom: -50px;
-        width: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* margin: auto; */
-    }
-
-
-
-    .laptopScreen {
-        width: 451px;
-        height: 283px;
-        position: absolute;
-        top: 115px;
-        left: -180px;
-        /* border-radius: 28px; */
-        overflow-y: scroll;
-        &::-webkit-scrollbar {
-            display: none;
-        }
     }
 
     .githubChart {
@@ -320,7 +279,7 @@ html {
 
     .githubTitle {
         text-align: center;
-        font-size: 15vw;
+        font-size: 10vw;
     }
 
     .githubSm {
@@ -328,21 +287,14 @@ html {
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        color: var(--text-color_1);
+        color: #555;
         font-size: 30px;
         text-align: center;
     }
 }
 
-
-.githubUserName {
-
-    font-size: 30px;
-    color: var(--text-color_1);
-}
-
 @media screen and (max-width: 1218px) {
-     .githubTitle {
+    .githubTitle {
         text-align: center;
         font-size: 10vw;
     }
