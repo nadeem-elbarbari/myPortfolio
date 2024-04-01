@@ -4,8 +4,11 @@ const boxContainer = document.querySelector('.boxContainer');
 const saluteTextContainer = document.querySelector('.saluteTextContainer');
 const saluteImageContainer = document.querySelector('.saluteImageContainer');
 const myName = document.querySelector('.name');
-const jobTitleContainer = document.querySelector('.jobTitleContainer');
-const jobTitle = document.querySelector('.jobTitle');
+const jobTitleContainer = document.querySelectorAll('.jobTitleContainer');
+const jobTitle = document.querySelectorAll('.jobTitle');
+const projectsTitle = document.querySelector('.projectsTitle');
+const laptop = document.querySelectorAll('.laptop');
+console.log('laptop :', laptop[2]);
 
 for (let index = 0; index < 365; index++) {
     const list = [
@@ -29,7 +32,15 @@ for (let index = 0; index < 365; index++) {
 
 window.addEventListener('scroll', () => {
     let offsetY = window.scrollY;
+
     saluteTextContainer.style.transform = `translateY(${offsetY * 0.1}px)`;
     saluteImageContainer.style.transform = `translate(${offsetY * 0.4}px, ${offsetY * 0.7}px)`;
-    myName.style.transform = `translateX(${offsetY * 0.4}px)`;
+    myName.style.transform = `translateX(${(offsetY - 900) * 0.4}px)`;
+    projectsTitle.style.transform = `translateY(calc(400vh - ${offsetY}px))`;
+    jobTitleContainer[0].style.backgroundPositionY = `${offsetY * 0.5}px`;
+    jobTitleContainer[1].style.backgroundPositionY = `${-offsetY * 0.5}px`;
+    jobTitle[0].style.transform = `translateX(calc(200vh - ${offsetY}px))`;
+    jobTitle[1].style.transform = `translateX(calc(-300vh + ${offsetY}px))`;
+    laptop[0].style.transform = `translateX(calc(-480vh + ${offsetY}px))`;
+    laptop[1].style.transform = `translateX(calc(610vh - ${offsetY}px))`;
 });
