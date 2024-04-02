@@ -2,8 +2,8 @@
 
 :root {
     --primary-bg: #111;
-    --secondary-bg: #0079ff;
-    --big-title-color: #333;
+    --secondary-bg: #007449;
+    --big-title-color: #a2a2a2;
     --text-color_1: #555;
     --accent-color_1: #97e7e1;
 }
@@ -107,13 +107,17 @@ html {
 
 #proj_1,
 #proj_2,
+#proj_3,
 #proj_1_desc,
+#proj_3_desc,
 #proj_2_desc {
     opacity: 0;
     transition: opacity 1s;
 }
 #proj_1.animate__animated,
 #proj_2.animate__animated,
+#proj_3.animate__animated,
+#proj_3_desc.animate__animated,
 #proj_2_desc.animate__animated,
 #proj_1_desc.animate__animated {
     opacity: 1;
@@ -125,7 +129,7 @@ html {
 }
 
 .projectTitle {
-    font-size: 7vw;
+    font-size: 5vw;
     text-align: justify;
     color: var(--text-color_1);
 }
