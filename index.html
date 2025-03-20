@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Nadeem Ehab Portfolio</title>
-        <meta name="description" content="Nadeem Ehab Portfolio"> 
+        <title>Nadeem Ehab | Web Developer & Designer</title>
+        <meta name="description" content="Portfolio of Nadeem Ehab - Web Developer and Designer showcasing creative projects and skills">
         <meta name="author" content="Nadeem Ehab">
         <link rel="icon" href="./images/favicon.svg" />
         <link rel="stylesheet" href="./style.css" />
@@ -12,11 +12,29 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
+        <link 
+            rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        />
     </head>
     <body>
         <div class="container">
+            <!-- Navigation -->
+            <nav class="navbar">
+                <div class="logo">NE</div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#github" class="nav-link">GitHub</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+
             <!-- Intro -->
-            <div class="intro">
+            <div id="home" class="intro">
                 <div class="salute">
                     <div class="saluteTextContainer">
                         <h2 class="saluteText">Hi</h2>
@@ -25,7 +43,7 @@
                         <img src="./images/person.png" alt="person" class="saluteImage" />
                     </div>
                 </div>
-                <div class="nameContainer">
+                <div class="jobTitleContainer colorful">
                     <h1 class="name">I'm Nadeem</h1>
                 </div>
                 <div class="jobTitleContainer dark">
@@ -34,10 +52,15 @@
                 <div class="jobTitleContainer colorful">
                     <h2 class="jobTitle">and Designer</h2>
                 </div>
+                <div class="scroll-indicator">
+                    <div class="mouse"></div>
+                    <p>Scroll Down</p>
+                </div>
             </div>
+            
             <!-- Projects -->
-            <div class="projects">
-                <h2 class="projectsTitle">Here are some of my projects</h2>
+            <div id="projects" class="projects-section">
+                <h2 class="projectSectionTitle">Here are some of my projects</h2>
                 <div class="projects-box">
                     <div id="project_1" class="project">
                         <div id="proj_1" class="laptop">
@@ -46,17 +69,22 @@
                                 <img
                                     class="laptopApp"
                                     src="./images/LaptopApp.png"
-                                    alt="LaptopApp"
+                                    alt="E-Commerce Website Screenshot"
                                 />
                             </div>
                         </div>
                         <div id="proj_1_desc" class="projectDetail">
                             <h2 class="projectTitle">E-Commerce</h2>
                             <p class="projectDesc">
-                                A fully functional e-commerce platform with ReactJS.
+                                A fully functional e-commerce platform built with ReactJS featuring product filtering, cart management, and secure checkout.
                             </p>
-                            <a href="https://nadeem-elbarbari.github.io/freshcart-ecommerce-v2/#/">
-                                <button class="projectButton">Know More</button>
+                            <div class="tech-stack">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Tailwind</span>
+                                <span class="tech-tag">API Integration</span>
+                            </div>
+                            <a href="https://nadeem-elbarbari.github.io/freshcart-ecommerce-v2/#/" target="_blank">
+                                <button class="projectButton">View Demo</button>
                             </a>
                         </div>
                     </div>
@@ -67,17 +95,22 @@
                                 <img
                                     class="laptopApp"
                                     src="./images/Website_2.png"
-                                    alt="LaptopApp"
+                                    alt="Recipes App Screenshot"
                                 />
                             </div>
                         </div>
                         <div id="proj_2_desc" class="projectDetail">
                             <h2 class="projectTitle">Recipes App</h2>
                             <p class="projectDesc">
-                                Browse and cook recipes from around the world.
+                                Browse and cook recipes from around the world with search functionality and step-by-step cooking instructions.
                             </p>
-                            <a href="https://nadeem-elbarbari.github.io/yummy/">
-                                <button class="projectButton">Know More</button>
+                            <div class="tech-stack">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">REST API</span>
+                                <span class="tech-tag">CSS3</span>
+                            </div>
+                            <a href="https://nadeem-elbarbari.github.io/yummy/" target="_blank">
+                                <button class="projectButton">View Demo</button>
                             </a>
                         </div>
                     </div>
@@ -88,24 +121,30 @@
                                 <img
                                     class="laptopApp"
                                     src="./images/Website_3.png"
-                                    alt="LaptopApp"
+                                    alt="Party Event Landing Page Screenshot"
                                 />
                             </div>
                         </div>
                         <div id="proj_3_desc" class="projectDetail">
                             <h2 class="projectTitle">Party Event</h2>
                             <p class="projectDesc">
-                                A Landing Page for a fictional party.
+                                A vibrant landing page for a fictional event featuring animations, ticket information, and venue details.
                             </p>
-                            <a href="https://nadeem-elbarbari.github.io/egyptian-party/">
-                                <button class="projectButton">Know More</button>
+                            <div class="tech-stack">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <a href="https://nadeem-elbarbari.github.io/egyptian-party/" target="_blank">
+                                <button class="projectButton">View Demo</button>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- github -->
-            <div class="githubContainer">
+            
+            <!-- Github -->
+            <div id="github" class="githubContainer">
                 <h2 class="githubTitle">Want to see all projects?</h2>
                 <div class="githubChart">
                     <div class="dates">
@@ -116,7 +155,7 @@
                         <span>May</span>
                         <span>Jun</span>
                         <span>Jul</span>
-                        <span>Agu</span>
+                        <span>Aug</span>
                         <span>Sep</span>
                         <span>Oct</span>
                         <span>Nov</span>
@@ -129,17 +168,47 @@
                     <a
                         href="https://github.com/nadeem-elbarbari/"
                         target="_blank"
-                        style="display: flex; align-items: center; text-decoration: none"
+                        class="github-link"
                     >
-                        <img src="./images/github.png" alt="" />
-
+                        <img src="./images/github.png" alt="GitHub Logo" />
                         <span class="githubUserName">/nadeem-elbarbari</span>
                     </a>
                     <h2 class="findMe">Find Me on Github</h2>
                 </div>
             </div>
+            
+            <!-- Contact Section -->
+            <div id="contact" class="contact-section">
+                <h2 class="contact-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>nadeem.elbarbari@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+2 010 13 6262 70</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Alexandria, Egypt</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/nadeem-ehab-b6505822b/" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://x.com/nadeem_eh" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://github.com/nadeem-elbarbari" class="social-link"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <footer class="footer">
+                <p>&copy; 2025 Nadeem Ehab. All rights reserved.</p>
+                <p>Made with <span class="heart">❤</span> by me.</p>
+            </footer>
         </div>
-        <script src="./jquery.min.js"></script>
         <script src="./main.js"></script>
     </body>
 </html>
