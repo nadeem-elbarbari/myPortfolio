@@ -118,9 +118,10 @@ window.addEventListener('scroll', () => {
         projectsTitle.style.transform = `translateY(calc(400vh - ${offsetY}px))`;
     }
 
-    if (jobTitleContainers.length >= 2) {
+    if (jobTitleContainers.length >= 3) {
         jobTitleContainers[0].style.backgroundPositionY = `${offsetY * 0.5}px`;
         jobTitleContainers[1].style.backgroundPositionY = `${-offsetY * 0.5}px`;
+        jobTitleContainers[2].style.backgroundPositionY = `${-offsetY * 0.5}px`;
 
         if (jobTitles.length >= 2) {
             jobTitles[0].style.transform = `translateX(calc(200vh - ${offsetY}px))`;
@@ -140,7 +141,7 @@ window.addEventListener('scroll', () => {
             const projectTop = project.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
 
-            if (projectTop < windowHeight - 200) {
+            if (projectTop < windowHeight - 400) {
                 const laptop = document.getElementById(`proj_${i + 1}`);
                 const desc = document.getElementById(`proj_${i + 1}_desc`);
 
